@@ -24,13 +24,13 @@
         }
 
         header img {
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: 200px;
             margin-bottom: 10px;
         }
 
         header h1 {
-            font-size: 36px;
+            font-size: 56px;
             margin: 0;
             font-weight: bold;
         }
@@ -41,23 +41,23 @@
         }
 
         h2 {
-            font-size: 28px;
+            font-size: 38px;
             font-weight: bold;
             margin-bottom: 10px;
         }
 
         /* Homepage Link */
         .homepage-link {
-            font-size: 22px;
+            font-size: 27px;
             color: purple;
             text-decoration: underline;
             display: block;
             margin-bottom: 10px;
         }
 
-        /* Enrolled Courses Title */
+        /* Section Title */
         .section-title {
-            font-size: 28px;
+            font-size: 48px;
             font-weight: bold;
             margin-top: 10px;
         }
@@ -100,6 +100,28 @@
             color: blue;
             text-decoration: underline;
         }
+
+        /* Pending Invitations Section */
+        .button-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .accept-btn {
+            background-color: green;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            font-size: 20px;
+        }
+
+        .decline-btn {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
@@ -110,9 +132,10 @@
 
     <main>
         <h2>LMS - Course View</h2>
-
+        <br>
+        <br>
         <a href="index.html" class="homepage-link">Homepage</a>
-
+        <br>
         <form>
             <label for="select">Select Term:</label>
             <select name="select" id="s1">
@@ -122,6 +145,7 @@
                 <option value="f23">Fall 2023</option>
             </select>
         </form>
+        <br>
 
         <h2 class="section-title">Enrolled Courses</h2>
         <hr>
@@ -162,7 +186,33 @@
                     <p class="course-text">Course Code: SA396</p>
                     <a href="attempt_quiz.html" class="quiz-link">Attempt Quiz</a>
                 </td>
-                <td></td> <!-- Empty Column -->
+                <td></td>
+            </tr>
+        </table>
+
+        <h2 class="section-title">Pending Invitations</h2>
+        <hr>
+
+        <table>
+            <tr>
+                <td>
+                    <img src="course2.jpg" alt="Pending">
+                    <p class="course-text">Course Name: Data Science</p>
+                    <p class="course-text">Course Code: DS102</p>
+                    <div class="button-container">
+                        <button class="accept-btn">Accept</button>
+                        <button class="decline-btn">Decline</button>
+                    </div>
+                </td>
+                <td>
+                    <img src="course2.jpg" alt="Pending">
+                    <p class="course-text">Course Name: Machine Learning</p>
+                    <p class="course-text">Course Code: ML105</p>
+                    <div class="button-container">
+                        <button class="accept-btn">Accept</button>
+                        <button class="decline-btn">Decline</button>
+                    </div>
+                </td>
             </tr>
         </table>
     </main>
