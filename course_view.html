@@ -3,35 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attempt Quiz - LMS</title>
+    <title>Course View - LMS</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 22px;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        /* Header */
+        header {
+            background-color: #ffffff;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+
+        header img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Homepage Link */
+        .homepage-link {
+            font-size: 22px;
+            color: purple;
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Enrolled Courses Title */
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        hr {
+            border: 2px solid rgb(222, 221, 221);
+            margin-top: 5px;
+        }
+
+        /* Table Layout */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            text-align: left;
+            vertical-align: top;
+            padding-bottom: 20px;
+            padding-left: 0;
+            padding-right: 0;
+            width: 33.33%;
+        }
+
+        /* Images: 100% width, ensuring no margins */
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Course Text Formatting */
+        .course-text {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .quiz-link {
+            font-size: 22px;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<body style="font-size: 17px;">
-    <img src="logo.jpg" alt="Logo" width="100" height="100">
-    <h1>
-        LMS - Learning Management System
-    </h1>
-    <h2>LMS - Course View</h2>
-    <div>
-        <a href="index.html"> Homepage </a> 
-    </div>
-    <br><br>
-<main style="font-size: 17px;">
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo">
+        <h1>LMS - Learning Management System</h1>
+    </header>
 
-<form>
-<label for="select">Select Term:</label>
- <select name="select" id="s1">
-    <option value="w25">Winter 2025</option>
-    <option value="f24">Fall 2024</option>
-    <option value="w24">Winter 2024</option>
-    <option value="f23">Fall 2023</option>
-</select>
-</form>
+    <main>
+        <h2>LMS - Course View</h2>
 
-<h2>Enrolled Courses</h2>
-<hr style="border: 2px solid rgb(222, 221, 221); ">
+        <a href="index.html" class="homepage-link">Homepage</a>
 
-</main>
-<br>
-<footer>&copy; 2025 LMS. All rights reserved.</footer>
+        <form>
+            <label for="select">Select Term:</label>
+            <select name="select" id="s1">
+                <option value="w25">Winter 2025</option>
+                <option value="f24">Fall 2024</option>
+                <option value="w24">Winter 2024</option>
+                <option value="f23">Fall 2023</option>
+            </select>
+        </form>
+
+        <h2 class="section-title">Enrolled Courses</h2>
+        <hr>
+
+        <table>
+            <!-- First Row (3 Images taking Full Width) -->
+            <tr class="row-1">
+                <td>
+                    <img src="course1.jpg" alt="Web Development">
+                    <p class="course-text">Course Name: Web Development</p>
+                    <p class="course-text">Course Code: WD381</p>
+                    <a href="attempt_quiz.html" class="quiz-link">Attempt Quiz</a>
+                </td>
+                <td>
+                    <img src="course1.jpg" alt="Data Structures">
+                    <p class="course-text">Course Name: Data Structures</p>
+                    <p class="course-text">Course Code: DS371</p>
+                    <a href="attempt_quiz.html" class="quiz-link">Attempt Quiz</a>
+                </td>
+                <td>
+                    <img src="course1.jpg" alt="DBMS">
+                    <p class="course-text">Course Name: DBMS</p>
+                    <p class="course-text">Course Code: DB346</p>
+                    <a href="attempt_quiz.html" class="quiz-link">Attempt Quiz</a>
+                </td>
+            </tr>
+            <!-- Second Row (2 Images taking Full Width) -->
+            <tr class="row-2">
+                <td>
+                    <img src="course1.jpg" alt="Software Testing">
+                    <p class="course-text">Course Name: Software Testing</p>
+                    <p class="course-text">Course Code: ST484</p>
+                    <a href="attempt_quiz.html" class="quiz-link">Attempt Quiz</a>
+                </td>
+                <td>
+                    <img src="course1.jpg" alt="Software Architectures">
+                    <p class="course-text">Course Name: Software Architectures</p>
+                    <p class="course-text">Course Code: SA396</p>
+                    <a href="attempt_quiz.html" class="quiz-link">Attempt Quiz</a>
+                </td>
+                <td></td> <!-- Empty Column -->
+            </tr>
+        </table>
+    </main>
+
+    <footer>&copy; 2025 LMS. All rights reserved.</footer>
 </body>
 </html>
