@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard - LMS</title>
     <style>
         body {
-            font-family: 'Times New Roman', Times, serif, sans-serif;
+            font-family: 'Times New Roman', Times, serif;
         }
-        .nav a {
-            margin-right: 10px;
+        .nav {
             text-decoration: none;
             color: blue;
         }
@@ -18,21 +15,31 @@
             border-collapse: collapse;
             margin-top: 20px;
         }
-        .leaderboard th, .leaderboard td {
+        th, td {                       /* Using a comma means these elements get the same style! */
             border: 1px solid black;
             padding: 10px;
             text-align: center;
         }
-        .leaderboard th {
-            background-color: green;
+        .header-row {
+            background-color: rgb(25, 169, 25);
             color: white;
+            font-weight: bold;
+            font-size: 40px;
+        }
+        .column-headers {
+            background-color: white;
+            color: black;
+            font-weight: bold;
         }
         .gold { background-color: gold; }
         .silver { background-color: silver; }
         .bronze { background-color: #cd7f32; }
+        .last-place { background-color: rgba(216, 215, 215, 0.926); }
+
     </style>
 </head>
 <body>
+    <img src="logo.jpg" alt="LMS Logo" width="100">
     <h1>LMS - Learning Management System</h1>
     <div class="nav">
         <a href="index.html">Homepage</a> |
@@ -40,7 +47,10 @@
     </div>
     
     <table class="leaderboard">
-        <tr>
+        <tr class="header-row">
+            <td colspan="5">Leaderboard</td>
+        </tr>
+        <tr class="column-headers">
             <th>Rank</th>
             <th>Profile Picture</th>
             <th>Name</th>
@@ -55,14 +65,13 @@
             <td>Web Development</td>
         </tr>
         <tr class="silver">
-            <td>2</td>
+            <td rowspan="2">2</td>
             <td><img src="student.png" alt="Profile" width="40"></td>
             <td>Jane Smith</td>
             <td>90</td>
             <td>Data Structures</td>
         </tr>
         <tr class="silver">
-            <td>2</td>
             <td><img src="student.png" alt="Profile" width="40"></td>
             <td>Emily White</td>
             <td>90</td>
@@ -82,8 +91,8 @@
             <td>80</td>
             <td>Networking</td>
         </tr>
-        <tr>
-            <td>4</td>
+        <tr class="last-place">
+            <td>5</td>
             <td><img src="student.png" alt="Profile" width="40"></td>
             <td>Rob Miller</td>
             <td>75</td>
@@ -92,7 +101,7 @@
     </table>
     
     <footer>
-        <p>&copy; 2025 LMS. All rights reserved.</p>
+        <p>© 2025 LMS. All rights reserved.</p>
     </footer>
 </body>
 </html>
