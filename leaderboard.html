@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Leaderboard - LMS</title>
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
         }
-        .nav a {
+        .nav {
             text-decoration: none;
             color: blue;
         }
@@ -17,18 +15,18 @@
             border-collapse: collapse;
             margin-top: 20px;
         }
-        .leaderboard th, .leaderboard td {
+        th, td {                       /* Using a comma means these elements get the same style! */
             border: 1px solid black;
             padding: 10px;
             text-align: center;
         }
-        .leaderboard .header-row {
+        .header-row {
             background-color: rgb(25, 169, 25);
             color: white;
             font-weight: bold;
             font-size: 40px;
         }
-        .leaderboard .column-headers {
+        .column-headers {
             background-color: white;
             color: black;
             font-weight: bold;
@@ -36,7 +34,8 @@
         .gold { background-color: gold; }
         .silver { background-color: silver; }
         .bronze { background-color: #cd7f32; }
-        .last-place { background-color: lightgray; }
+        .last-place { background-color: rgba(216, 215, 215, 0.926); }
+
     </style>
 </head>
 <body>
@@ -102,7 +101,7 @@
     </table>
     
     <footer>
-        <p>FIXME: PLACE FOOTER HERE!!!</p>
+        <p>© 2025 LMS. All rights reserved.</p>
     </footer>
 </body>
 </html>
